@@ -1,0 +1,19 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "adminUids": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": false
+      }
+    },
+    "approvedUsers": {
+      ".read": "auth != null && root.child('adminUids').child(auth.uid).val() === true",
+      ".write": "auth != null && root.child('adminUids').child(auth.uid).val() === true",
+      "$username": {
+        ".read": true
+      }
+    }
+  }
+}
