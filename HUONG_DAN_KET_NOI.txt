@@ -1,0 +1,20 @@
+XOAIP — KẾT NỐI USER + ADMIN (03/11/2026)
+
+Firebase Project: admin008-75abc
+Realtime Database: https://admin008-75abc-default-rtdb.asia-southeast1.firebasedatabase.app
+Admin UID: s5mlhn6PRMMqMTvq0S9Y3rZuFJc2
+
+1. Firebase Authentication > Sign-in method: bật Email/Password.
+2. Firebase Authentication > Users: tài khoản ADMIN phải có UID nêu trên, email đã xác minh.
+3. Firebase Realtime Database > Data: adminUids/s5mlhn6PRMMqMTvq0S9Y3rZuFJc2 = true (Boolean).
+4. Firebase Realtime Database > Rules: dán nội dung database.rules.json và Publish.
+   Quy tắc này cho ADMIN đã đăng nhập, xác minh email và có UID được cấp quyền đọc/ghi approvedUsers;
+   USER công khai chỉ đọc từng tên tài khoản, không được ghi.
+5. Triển khai ZIP USER và ZIP ADMIN thành hai dự án Vercel riêng.
+6. Đăng nhập ADMIN, thêm tài khoản thử (vd: test123), rồi nhập test123 trên USER để kiểm tra.
+   Xóa test123 trong ADMIN và kiểm tra lại USER.
+
+LƯU Ý: Chưa thể kiểm chứng đăng nhập/ghi dữ liệu trực tiếp từ môi trường này.
+Các Rules đã nhập trước đó nếu chỉ cho UID admin đọc toàn bộ approvedUsers thì USER sẽ bị permission_denied.
+Việc cho phép đọc từng username có thể bị dò tên; muốn giấu danh sách hoàn toàn cần backend API.
+Không đặt mật khẩu ADMIN trong HTML.
