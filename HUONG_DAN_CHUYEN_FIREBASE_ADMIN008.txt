@@ -1,0 +1,1 @@
+XOAIP USER: Firebase admin008-75abc. Da thay trong index.html va xoaip-chat.js. Can bat Firebase Authentication Anonymous (USER), Email/Password (ADMIN), them domain moi vao Authorized domains, thiet lap Realtime Database Rules va adminUids trong project moi. Du lieu cu khong tu dong chuyen. Giu nguyen Cloudinary va giao dien.
